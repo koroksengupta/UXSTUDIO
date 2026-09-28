@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UX Research Studio</title>
+<meta name="description" content="Student handout for the UX Research Studio: five briefs, ground rules, deliverables and grading.">
+<meta name="theme-color" content="#2340E8">
+
+<!-- Fonts: Bricolage Grotesque (headings, labels) and Source Serif 4 (body).
+     Both fall back to system fonts if Google Fonts is unreachable. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ======================================================================
+     HERO
+     Title and introduction on the left; a jump list of the five briefs on
+     the right. Each entry must match a brief card's id (#brief-N) below.
+     ====================================================================== -->
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1>UX Research Studio</h1>
+      <p class="hero-lede">Each group takes one loose brief and turns it into research: real interviews, personas backed by evidence, and a journey map that shows where design should step in.</p>
+    </div>
+
+    <nav aria-labelledby="pairs-title">
+      <p class="pairs-title" id="pairs-title">Five briefs, each with two sides to hear</p>
+      <ul class="pairs">
+        <li><a href="#brief-1"><span class="pair"><span>Planner</span><span class="connector" aria-hidden="true"></span><span>Cook</span></span><span class="pair-name">Planned, Bought, Still Wasted</span></a></li>
+        <li><a href="#brief-2"><span class="pair"><span>Older adult</span><span class="connector" aria-hidden="true"></span><span>Helper</span></span><span class="pair-name">Handed Over, Still Independent</span></a></li>
+        <li><a href="#brief-3"><span class="pair"><span>Student</span><span class="connector" aria-hidden="true"></span><span>Screener</span></span><span class="pair-name">Jobs Everywhere, Candidates Nowhere</span></a></li>
+        <li><a href="#brief-4"><span class="pair"><span>Storer</span><span class="connector" aria-hidden="true"></span><span>Searcher</span></span><span class="pair-name">Neatly Lost</span></a></li>
+        <li><a href="#brief-5"><span class="pair"><span>Tenant</span><span class="connector" aria-hidden="true"></span><span>Landlord</span></span><span class="pair-name">Agreed, Explained, Still Disputed</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ======================================================================
+     SECTION NAV
+     Sticks to the top of the viewport while scrolling. Each link targets a
+     <section id> inside <main>.
+     ====================================================================== -->
+<nav class="site-nav" aria-label="Sections">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#briefs">The five briefs</a></li>
+    <li><a href="#rules">Ground rules</a></li>
+    <li><a href="#deliverables">What you hand in</a></li>
+    <li><a href="#grading">Grading</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+  <!-- ====================================================================
+       OVERVIEW: what the studio is, and how to read a brief
+       ==================================================================== -->
+  <section id="overview" aria-labelledby="overview-title">
+    <h2 id="overview-title">What this studio asks of you</h2>
+    <p class="measure">Each group is to select one topic, and each topic should have only 2 groups working on it. The two groups must not investigate the same area, so talk to each other and plan your work better. Your research will produce a sharp question, real interviews, personas backed by evidence, and a journey map that points to where design should intervene.</p>
+    <p class="measure">By the end you will have practised four things:</p>
+    <ul class="plain measure">
+      <li><span class="lead-in">Framing:</span> turning an ambiguous statement into a researchable question.</li>
+      <li><span class="lead-in">Fieldwork:</span> recruiting participants and running structured interviews, plus a survey to test what you heard.</li>
+      <li><span class="lead-in">Synthesis:</span> turning qualitative data into personas and insights, not a wall of sticky notes.</li>
+      <li><span class="lead-in">Journey mapping:</span> finding the moments that matter and proposing an intervention for each.</li>
+    </ul>
+    <p class="measure">Two groups work on each brief. Both start from the same statement but must choose <strong>different user segments</strong>, so we can compare findings in the debrief.</p>
+
+    <h3>How to read a brief</h3>
+    <p class="measure">Every brief follows the same pattern: everyone did the sensible thing, the outcome still fails, and two roles see it differently.</p>
+    <ul class="plain measure">
+      <li><span class="lead-in">Statement:</span> what you are given. It is loose on purpose.</li>
+      <li><span class="lead-in">Hidden tension:</span> the contradiction we suspect. Treat it as a hypothesis, not a fact.</li>
+      <li><span class="lead-in">People to talk to:</span> the roles you must interview, and compare, to test the tension.</li>
+      <li><span class="lead-in">Sharper questions:</span> starting points for your interview guide. Rewrite them; do not copy them.</li>
+      <li><span class="lead-in">Watch out for:</span> the traps earlier teams have fallen into.</li>
+    </ul>
+  </section>
+
+  <!-- ====================================================================
+       THE FIVE BRIEFS
+       Every brief card uses the same structure. To add or edit one, copy an
+       existing <article> and keep:
+         - id="brief-N"            target of the hero jump list
+         - id="brief-N-title"      referenced by aria-labelledby
+         - .brief-pair             the two roles, joined by a .connector
+         - <blockquote>            the statement students are given
+         - .facts                  label/value rows; the first row has
+                                   class="tension" to highlight it
+       ==================================================================== -->
+  <section id="briefs" aria-labelledby="briefs-title">
+    <h2 id="briefs-title">The five briefs</h2>
+
+    <!-- Brief 1 -->
+    <article class="brief" id="brief-1" aria-labelledby="brief-1-title">
+      <h3 id="brief-1-title">Brief 1: Planned, Bought, Still Wasted</h3>
+      <p class="brief-pair"><span>Planner</span><span class="connector" aria-hidden="true"></span><span>Cook</span></p>
+      <blockquote>Many households shop with a plan or a list, and still end up throwing food away or ordering something else for dinner. Understand what happens between the shopping bag and the plate.</blockquote>
+      <dl class="facts">
+        <div class="tension"><dt>Hidden tension</dt><dd>The person who plans, the person who shops, the person who cooks and the people who eat are often different, or the same person at different energy levels. A plan made at 11am rarely survives 7pm.</dd></div>
+        <div><dt>People to talk to</dt><dd>The household's planner or buyer <em>and</em> its cook, or the cook <em>and</em> those who eat. Compare their accounts of the same week.</dd></div>
+        <div><dt>Sharper questions</dt><dd>At what moment does the plan get abandoned, and what replaces it? Who decides that food is no longer good?</dd></div>
+        <div><dt>Watch out for</dt><dd>Moralising about waste, and "build a meal-planning app" solutions. Describe behaviour; do not judge it.</dd></div>
+      </dl>
+    </article>
+
+    <!-- Brief 2 -->
+    <article class="brief" id="brief-2" aria-labelledby="brief-2-title">
+      <h3 id="brief-2-title">Brief 2: Handed Over, Still Independent</h3>
+      <p class="brief-pair"><span>Older adult</span><span class="connector" aria-hidden="true"></span><span>Helper</span></p>
+      <blockquote>Many older adults managed their own money, paperwork and travel for decades. Now, for banking, pensions, tickets and government services, they hand over the phone or the task to someone else. Both sides often say it works fine. Explore what is handed over, and what isn't.</blockquote>
+      <dl class="facts">
+        <div class="tension"><dt>Hidden tension</dt><dd>Help can work and still cost something: independence, understanding of what was done, or safety when PINs and OTPs are shared. The helper carries a burden the older adult may not see.</dd></div>
+        <div><dt>People to talk to</dt><dd>An older adult (60+) <em>and</em> their helper (family member, neighbour or shopkeeper), interviewed separately, then compared.</dd></div>
+        <div><dt>Sharper questions</dt><dd>What do older adults still do alone, and why those tasks? What does the helper never say out loud? What does the older adult not know about what was done on their behalf?</dd></div>
+        <div><dt>Watch out for</dt><dd>Treating older adults as one "low-tech" group. Never ask for account details, PINs or credentials, and handle fraud stories with care. Since you may be the helper in your own family, note your own bias.</dd></div>
+      </dl>
+    </article>
+
+    <!-- Brief 3 -->
+    <article class="brief" id="brief-3" aria-labelledby="brief-3-title">
+      <h3 id="brief-3-title">Brief 3: Jobs Everywhere, Candidates Nowhere</h3>
+      <p class="brief-pair"><span>Student</span><span class="connector" aria-hidden="true"></span><span>Screener</span></p>
+      <blockquote>Final-year students and recent graduates often say there are not enough good opportunities. Recruiters and placement officers often say they cannot find the right candidates. Both are describing the same hiring season. Understand what each side actually experiences.</blockquote>
+      <dl class="facts">
+        <div class="tension"><dt>Hidden tension</dt><dd>Each side sees only its own half of the process. Students cannot see how they are screened, and recruiters cannot see how students decide where to apply.</dd></div>
+        <div><dt>People to talk to</dt><dd>Students (top, average and recent graduates) <em>and</em> someone who screens or places them (recruiter, placement officer, HR, or a senior who recently interviewed candidates).</dd></div>
+        <div><dt>Sharper questions</dt><dd>What signals does each side believe it is sending, and what does the other side actually receive? Where do students get information, and whom do they trust?</dd></div>
+        <div><dt>Watch out for</dt><dd>"Build a job portal", interviewing only friends, and steering participants into talking about self-worth after rejection. Keep questions on process.</dd></div>
+      </dl>
+    </article>
+
+    <!-- Brief 4: the only brief with a Scope row -->
+    <article class="brief" id="brief-4" aria-labelledby="brief-4-title">
+      <h3 id="brief-4-title">Brief 4: Neatly Lost</h3>
+      <p class="brief-pair"><span>Storer</span><span class="connector" aria-hidden="true"></span><span>Searcher</span></p>
+      <blockquote>Most households believe they are reasonably organised. Yet when something is urgently needed, whether a document, a tool, a charger or a piece of clothing, it can't be found, or only one person knows where it is. Understand what really happens.</blockquote>
+      <dl class="facts">
+        <div class="tension"><dt>Hidden tension</dt><dd>The person who stored the item and the person who searches for it have different mental maps of the house.</dd></div>
+        <div><dt>People to talk to</dt><dd>One storer <em>and</em> one searcher from the <strong>same</strong> household, interviewed separately, then compared.</dd></div>
+        <div><dt>Scope</dt><dd>Each group picks one category: important documents, tools and hardware, gadgets and cables, seasonal items, or children's school and hobby items. Food is excluded to avoid overlap with Brief 1.</dd></div>
+        <div><dt>Sharper questions</dt><dd>How do people decide where something goes? When is a duplicate bought instead of searching? Who is the household's keeper of knowledge, and what happens when they are away?</dd></div>
+        <div><dt>Watch out for</dt><dd>"Build an inventory app with QR codes". Ask why earlier attempts (labels, boxes, lists) failed in your participants' homes. Never comment on tidiness. Prefer high-stakes cases, such as a passport or property papers needed the same day.</dd></div>
+      </dl>
+    </article>
+
+    <!-- Brief 5 -->
+    <article class="brief" id="brief-5" aria-labelledby="brief-5-title">
+      <h3 id="brief-5-title">Brief 5: Agreed, Explained, Still Disputed</h3>
+      <p class="brief-pair"><span>Tenant</span><span class="connector" aria-hidden="true"></span><span>Landlord</span></p>
+      <blockquote>Tenants in hostels, PGs and rented flats often say they were not told important things before moving in. Landlords, owners and wardens often say the rules were clear. Understand what was actually communicated, and when.</blockquote>
+      <dl class="facts">
+        <div class="tension"><dt>Hidden tension</dt><dd>Both sides may be telling the truth. Rules can be stated without being understood, and expectations can exist without being spoken.</dd></div>
+        <div><dt>People to talk to</dt><dd>Tenants in different arrangements (hostel, PG, shared flat) <em>and</em> landlords, PG owners or wardens.</dd></div>
+        <div><dt>Sharper questions</dt><dd>What did each side believe was agreed, and when did they first find out it wasn't? What happens when something goes wrong: repairs, rent, deposits, guests?</dd></div>
+        <div><dt>Watch out for</dt><dd>"Build a rental app", and hearing only the tenant's version.</dd></div>
+      </dl>
+    </article>
+  </section>
+
+  <!-- ====================================================================
+       GROUND RULES
+       ==================================================================== -->
+  <section id="rules" aria-labelledby="rules-title">
+    <h2 id="rules-title">Ground rules</h2>
+    <p class="measure">Four rules apply to every group. They are what make your findings defensible.</p>
+    <ol class="plain measure">
+      <li><span class="lead-in">Write your hypothesis first, then try to disprove it.</span> Before fieldwork, state the hidden tension as one testable sentence. During interviews, look for evidence against it. If the tension turns out not to be real, that is a valid finding and you report it.</li>
+      <li><span class="lead-in">Sample beyond your friends.</span> At least half of your participants must come from outside your own branch, year or friend circle. Your group must include at least one person from every role listed under <em>People to talk to</em> for your brief.</li>
+      <li><span class="lead-in">Compare within pairs.</span> Where your brief names two roles, interview them separately and set their accounts side by side. The contradictions are the raw material for personas and journey maps.</li>
+      <li><span class="lead-in">If possible, sort out ethics and consent before fieldwork.</span>
+        <ul class="plain">
+          <li>Give every participant a short consent script: who you are, why you are asking, what you will record, and that they can stop at any time.</li>
+          <li>Ask about process and behaviour, never about identity, finances, credentials or anything you would not want asked of your own family.</li>
+          <li>Do not record audio, video or photos without explicit permission. Home walkthroughs (Briefs 1 and 4) need consent from every adult present.</li>
+          <li>Have your interview guide reviewed by the instructor before your first interview.</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ====================================================================
+       DELIVERABLES
+       Responsive table: on narrow screens each row becomes a stacked card,
+       and every <td> shows its column name from data-label. Keep data-label
+       in sync with the matching <th> in <thead>.
+       ==================================================================== -->
+  <section id="deliverables" aria-labelledby="deliverables-title">
+    <h2 id="deliverables-title">What you hand in</h2>
+    <p class="measure">Each deliverable has a minimum evidence bar. Falling below it costs marks in the rubric, however polished the slides are.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th scope="col">Deliverable</th><th scope="col">What it must contain</th><th scope="col">Minimum evidence bar</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Research question and hypothesis</th><td data-label="What it must contain">Your reframed question, the hidden tension as a testable sentence, and who you will talk to and why</td><td data-label="Minimum evidence bar">Written before fieldwork; approved by the instructor</td></tr>
+          <tr><th scope="row">Interview guide</th><td data-label="What it must contain">Open questions grouped by journey stage, a consent script, and a note on how you will avoid leading questions</td><td data-label="Minimum evidence bar">Reviewed by the instructor before your first interview</td></tr>
+          <tr><th scope="row">Interviews</th><td data-label="What it must contain">Notes or transcripts, tagged by participant code and role</td><td data-label="Minimum evidence bar">At least 6 interviews, covering every role named in your brief</td></tr>
+          <tr><th scope="row">Survey</th><td data-label="What it must contain">Short survey used to <em>test</em> what interviews suggested, not to replace them</td><td data-label="Minimum evidence bar">At least 30 responses; each question traceable to an interview finding</td></tr>
+          <tr><th scope="row">Personas</th><td data-label="What it must contain">2 or 3 personas built from patterns in your data</td><td data-label="Minimum evidence bar">Every persona cites specific quotes and behaviours from named participant codes</td></tr>
+          <tr><th scope="row">Insights</th><td data-label="What it must contain">The headline findings</td><td data-label="Minimum evidence bar">Each written as "because... so... which means..." and linked to evidence; a theme label alone does not count</td></tr>
+          <tr><th scope="row">Journey map</th><td data-label="What it must contain">One end-to-end map for one persona or role pair, with emotions and touchpoints</td><td data-label="Minimum evidence bar">2 or 3 moments that matter, each justified with evidence</td></tr>
+          <tr><th scope="row">Interventions</th><td data-label="What it must contain">One intervention per moment that matters</td><td data-label="Minimum evidence bar">Each with a way to test it and a note on what would prove it wrong</td></tr>
+          <tr><th scope="row">Reflection</th><td data-label="What it must contain">What surprised you, what your hypothesis got wrong, what you would do differently</td><td data-label="Minimum evidence bar">One page maximum</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <aside class="callout" aria-label="Example insight">
+      <p><span class="lead-in">What a good insight reads like</span><em>"Because the person who stored the passport is not the person who needs it, and only one of them knows the storage logic, the household buys duplicates instead of searching, which means any solution has to transfer the storer's reasoning, not just the item's location."</em></p>
+    </aside>
+  </section>
+
+  <!-- ====================================================================
+       GRADING
+       Weights must total 100. Same responsive-table rules as above.
+       ==================================================================== -->
+  <section id="grading" aria-labelledby="grading-title">
+    <h2 id="grading-title">How you will be graded</h2>
+    <p class="measure">Weights below are a suggested starting point out of 100; the instructor may adjust them. Synthesis and journey mapping carry the most marks because they are where research turns into design direction.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th scope="col">Criterion</th><th scope="col">Weight</th><th scope="col">Strong work</th><th scope="col">Weak work</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Framing</th><td class="weight" data-label="Weight">15</td><td data-label="Strong work">The question is specific and researchable; the hypothesis can be proved wrong; the chosen segment is justified</td><td data-label="Weak work">The question restates the brief, or is really a solution ("build an app for...")</td></tr>
+          <tr><th scope="row">Fieldwork</th><td class="weight" data-label="Weight">20</td><td data-label="Strong work">Interview guide avoids leading questions; participants cover all named roles; the survey tests interview findings</td><td data-label="Weak work">Only friends interviewed; questions ask for opinions rather than past behaviour; survey unrelated to interviews</td></tr>
+          <tr><th scope="row">Synthesis</th><td class="weight" data-label="Weight">25</td><td data-label="Strong work">Personas rest on patterns and cite participant codes; insights follow "because... so... which means..."; contradictions between roles are analysed</td><td data-label="Weak work">Personas are invented demographics; insights are theme labels; only one side heard</td></tr>
+          <tr><th scope="row">Journey map and intervention</th><td class="weight" data-label="Weight">25</td><td data-label="Strong work">Moments that matter are chosen with evidence; each intervention is testable and links back to a specific insight</td><td data-label="Weak work">Map is a generic process diagram; interventions are feature lists with no evidence</td></tr>
+          <tr><th scope="row">Ethics and sampling</th><td class="weight" data-label="Weight">10</td><td data-label="Strong work">Consent script used; sampling rule met; participant sheet kept; no sensitive data collected</td><td data-label="Weak work">Missing consent; participants overlap with another group; credentials or private details requested</td></tr>
+          <tr><th scope="row">Reflection and communication</th><td class="weight" data-label="Weight">5</td><td data-label="Strong work">Honest account of what the hypothesis got wrong; clear, concise presentation</td><td data-label="Weak work">Only reports what went as expected</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="closing"><strong>Where teams most often lose marks:</strong> hearing only one side of the story, presenting themes instead of insights, and jumping to a solution before the evidence supports one.</p>
+  </section>
+
+</main>
+
+<footer>UX Research Studio</footer>
+</body>
+</html>
