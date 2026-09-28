@@ -224,6 +224,8 @@
   <!-- ====================================================================
        GRADING
        Weights must total 100. Same responsive-table rules as above.
+       Rows with class="bonus" are greyed out and starred; the star is
+       explained in the .table-note footnote under the table.
        ==================================================================== -->
   <section id="grading" aria-labelledby="grading-title">
     <h2 id="grading-title">How you will be graded</h2>
@@ -238,11 +240,13 @@
           <tr><th scope="row">Fieldwork</th><td class="weight" data-label="Weight">20</td><td data-label="Strong work">Interview guide avoids leading questions; participants cover all named roles; the survey tests interview findings</td><td data-label="Weak work">Only friends interviewed; questions ask for opinions rather than past behaviour; survey unrelated to interviews</td></tr>
           <tr><th scope="row">Synthesis</th><td class="weight" data-label="Weight">25</td><td data-label="Strong work">Personas rest on patterns and cite participant codes; insights follow "because... so... which means..."; contradictions between roles are analysed</td><td data-label="Weak work">Personas are invented demographics; insights are theme labels; only one side heard</td></tr>
           <tr><th scope="row">Journey map and intervention</th><td class="weight" data-label="Weight">25</td><td data-label="Strong work">Moments that matter are chosen with evidence; each intervention is testable and links back to a specific insight</td><td data-label="Weak work">Map is a generic process diagram; interventions are feature lists with no evidence</td></tr>
-          <tr><th scope="row">Ethics and sampling</th><td class="weight" data-label="Weight">10</td><td data-label="Strong work">Consent script used; sampling rule met; participant sheet kept; no sensitive data collected</td><td data-label="Weak work">Missing consent; participants overlap with another group; credentials or private details requested</td></tr>
+          <tr class="bonus"><th scope="row">Ethics and sampling&nbsp;<span class="bonus-mark" aria-hidden="true">★</span><span class="visually-hidden">(bonus criterion)</span></th><td class="weight" data-label="Weight">10</td><td data-label="Strong work">Consent script used; sampling rule met; participant sheet kept; no sensitive data collected</td><td data-label="Weak work">Missing consent; participants overlap with another group; credentials or private details requested</td></tr>
           <tr><th scope="row">Reflection and communication</th><td class="weight" data-label="Weight">5</td><td data-label="Strong work">Honest account of what the hypothesis got wrong; clear, concise presentation</td><td data-label="Weak work">Only reports what went as expected</td></tr>
         </tbody>
       </table>
     </div>
+    <!-- Footnote for rows marked with .bonus in the grading table -->
+    <p class="table-note"><span class="bonus-mark" aria-hidden="true">★</span> <strong>Bonus:</strong> ethics and sampling can earn you bonus points when done properly.</p>
     <p class="closing"><strong>Where teams most often lose marks:</strong> hearing only one side of the story, presenting themes instead of insights, and jumping to a solution before the evidence supports one.</p>
   </section>
 

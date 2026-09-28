@@ -93,6 +93,16 @@ h1, h2, h3 {
 /* Caps a block of prose at a readable line length. */
 .measure { max-width: var(--measure); }
 
+/* Hidden on screen but still read aloud by screen readers. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 /* Bold sans-serif label that opens a list item or callout. */
 .lead-in { font-family: var(--sans); font-weight: 700; }
 
@@ -410,6 +420,18 @@ tbody tr:last-child > * { border-bottom: 0; }
 /* Numeric weight column in the grading table. */
 td.weight { width: 5rem; font-family: var(--sans); font-weight: 700; }
 
+/* Bonus criterion: greyed out and starred, explained by .table-note. */
+tr.bonus { background: var(--paper); }
+tr.bonus > * { color: var(--muted); }
+.bonus-mark { color: var(--cobalt); }
+
+.table-note {
+  max-width: 46rem;
+  margin: .75rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
 .closing { max-width: 46rem; margin-top: 1.5rem; }
 
 
@@ -483,6 +505,7 @@ footer {
   tbody tr:last-child { border-bottom: 0; }
   th, td { padding: .35rem 1rem; border: 0; }
   tbody th, td.weight { width: auto; }
+  tr.bonus td[data-label]::before { color: var(--muted); }
   td[data-label]::before {
     content: attr(data-label);
     display: block;
@@ -516,7 +539,7 @@ footer {
   .brief, tr, .callout { break-inside: avoid; }
 
   /* Browsers drop background colours by default; keep the brand accents. */
-  .connector, .connector::before, .connector::after, .facts .tension {
+  .connector, .connector::before, .connector::after, .facts .tension, tr.bonus {
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
   }

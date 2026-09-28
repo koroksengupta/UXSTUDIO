@@ -114,6 +114,10 @@ column.
 
 The grading weights should add up to 100.
 
+To mark a grading criterion as a bonus, add `class="bonus"` to its `<tr>` and
+put the star after its name, as on the *Ethics and sampling* row. The row turns
+grey, and the star is explained in the note under the table (`.table-note`).
+
 ## Styling
 
 `css/styles.css` is split into numbered sections, listed in the comment at the
